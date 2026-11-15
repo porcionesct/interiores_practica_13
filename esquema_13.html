@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 13. Galería ciega. Esquema y montaje</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header>
+        <h1>Instalaciones eléctricas interiores</h1>
+        <p>Práctica 13. Galería ciega. Esquema y montaje</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Práctica 13 (Galería ciega)</a></li>
+            <li><a href="rubrica_13.html">Rúbrica evaluación</a></li>
+            <li class="active"><a href="esquema_13.html">Esquema y montaje</a></li>
+            <li><a href="simulacion_13.html">Simulación</a></li>
+            <li><a href="presupuesto.html">Presupuesto</a></li>
+            <li><a href="glosario.html">Glosario</a></li>
+            <li><a href="prl.html">Seguridad y PRL</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <h2>13.- Galería ciega: esquema y montaje</h2>
+
+        <div class="section">
+            <h3 class="section-header">1. Esquema eléctrico</h3>
+            <p>La fase pasa por el interruptor general I y llega al <strong>común de C1</strong>. Cada conmutador envía la fase a <strong>su lámpara</strong> o al <strong>común del siguiente</strong>; la segunda salida del último (C3) alimenta L4. El neutro llega directamente a las cuatro lámparas.</p>
+            <div class="automata-image">
+            <svg viewBox="0 0 480 270" style="width:100%;max-width:620px;background:#fff;border:1px solid #ccc;border-radius:6px" role="img" aria-label="Esquema de encendido alternativo de cuatro lámparas con conmutadores en cascada">
+                <text x="70" y="16" fill="#607586" font-size="10">230 V · 50 Hz</text>
+                <path d="M30 40 V200 H60" fill="none" stroke="#d97706" stroke-width="4" stroke-linecap="round"/>
+                <text x="14" y="36" fill="#b45309" font-size="12" font-weight="700">F</text>
+                <circle cx="60" cy="200" r="4" fill="#d97706"/><circle cx="100" cy="200" r="4" fill="#d97706"/>
+                <path d="M60 200 L96 182" stroke="#d97706" stroke-width="3" fill="none"/>
+                <text x="80" y="222" text-anchor="middle" font-size="11" fill="#81540a" font-weight="700">I</text>
+                <path d="M100 200 H130" fill="none" stroke="#d97706" stroke-width="4"/>
+                <!-- C1 -->
+                <circle cx="130" cy="200" r="5" fill="#d97706"/>
+                <path d="M130 200 L166 168" stroke="#d97706" stroke-width="3" fill="none"/>
+                <circle cx="170" cy="165" r="4" fill="#7c3aed"/><circle cx="170" cy="230" r="4" fill="#7c3aed"/>
+                <text x="140" y="250" text-anchor="middle" font-size="11" fill="#5b21b6" font-weight="700">C1</text>
+                <path d="M170 165 V90" fill="none" stroke="#7c3aed" stroke-width="4"/>
+                <path d="M170 230 H210 V200 H220" fill="none" stroke="#7c3aed" stroke-width="4" stroke-linejoin="round"/>
+                <!-- C2 -->
+                <circle cx="220" cy="200" r="5" fill="#7c3aed"/>
+                <path d="M220 200 L256 232" stroke="#7c3aed" stroke-width="3" fill="none"/>
+                <circle cx="260" cy="165" r="4" fill="#7c3aed"/><circle cx="260" cy="230" r="4" fill="#7c3aed"/>
+                <text x="232" y="250" text-anchor="middle" font-size="11" fill="#5b21b6" font-weight="700">C2</text>
+                <path d="M260 165 V90" fill="none" stroke="#7c3aed" stroke-width="4"/>
+                <path d="M260 230 H300 V200 H310" fill="none" stroke="#7c3aed" stroke-width="4" stroke-linejoin="round"/>
+                <!-- C3 -->
+                <circle cx="310" cy="200" r="5" fill="#7c3aed"/>
+                <path d="M310 200 L346 232" stroke="#7c3aed" stroke-width="3" fill="none"/>
+                <circle cx="350" cy="165" r="4" fill="#7c3aed"/><circle cx="350" cy="230" r="4" fill="#7c3aed"/>
+                <text x="322" y="250" text-anchor="middle" font-size="11" fill="#5b21b6" font-weight="700">C3</text>
+                <path d="M350 165 V90" fill="none" stroke="#7c3aed" stroke-width="4"/>
+                <path d="M350 230 H440 V90" fill="none" stroke="#7c3aed" stroke-width="4" stroke-linejoin="round"/>
+                <!-- lámparas -->
+                <g fill="#fff" stroke="#91a6b5" stroke-width="2">
+                  <circle cx="170" cy="72" r="18"/><circle cx="260" cy="72" r="18"/><circle cx="350" cy="72" r="18"/><circle cx="440" cy="72" r="18"/>
+                </g>
+                <path d="M157 59 L183 85 M183 59 L157 85 M247 59 L273 85 M273 59 L247 85 M337 59 L363 85 M363 59 L337 85 M427 59 L453 85 M453 59 L427 85" stroke="#91a6b5" stroke-width="1.5"/>
+                <text x="192" y="98" font-size="11" fill="#34546a" font-weight="700">L1</text>
+                <text x="282" y="98" font-size="11" fill="#34546a" font-weight="700">L2</text>
+                <text x="372" y="98" font-size="11" fill="#34546a" font-weight="700">L3</text>
+                <text x="452" y="108" font-size="11" fill="#34546a" font-weight="700">L4</text>
+                <path d="M170 54 V30 M260 54 V30 M350 54 V30 M440 54 V30 H50 V40" fill="none" stroke="#0284c7" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <text x="40" y="56" fill="#0284c7" font-size="12" font-weight="700">N</text>
+                <text x="240" y="266" text-anchor="middle" font-size="10" fill="#607586">I abierto: todas apagadas (al cerrarlo, con C1 en posición 1, luce L1) · Esquema conceptual</text>
+            </svg>
+            </div>
+            <div class="aviso">La representación es didáctica y simplificada. En el montaje real se incorporarán las protecciones, canalizaciones y conductor de protección que correspondan. El conductor de protección no sustituye al neutro.</div>
+        </div>
+
+        <div class="section">
+            <h3 class="section-header">2. Plano de montaje en el tablero</h3>
+            <p><strong>Plano de ejecución de la práctica.</strong> Incluye el esquema eléctrico y el esquema de montaje: caja de registro con regleta F · N · T, las cuatro lámparas unidas con tubo y los mecanismos I, C1, C2 y C3 unidos con canal protectora. Haz clic sobre la imagen para ampliarla.</p>
+            <div class="automata-image">
+                <img id="myImg" class="plano-ancho" src="images_13/circuito_13.png" alt="Plano de montaje: galería ciega con conmutadores en cascada" style="cursor: pointer;">
+            </div>
+        </div>
+
+        <div class="section">
+            <h3 class="section-header">3. Distribución en el panel</h3>
+            <p>Según el plano de la práctica: la <strong>caja de registro</strong> en el centro con la regleta F · N · T; las <strong>lámparas L1 a L4</strong> por encima, unidas con tubo (L1 y L2 en línea recta; L3 y L4 con curva por la derecha); y por debajo, de izquierda a derecha, el <strong>interruptor I</strong> y los <strong>conmutadores C1, C2 y C3</strong>, unidos a la caja con <strong>canal protectora</strong>. Todas las uniones se hacen en la caja de registro.</p>
+            <table>
+                <thead><tr><th>Canalización</th><th>Conductores</th><th>Función</th></tr></thead>
+                <tbody>
+                    <tr><td>Caja de registro → I (canal)</td><td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:middle;background:#d97706"></span>Fase · <span style="display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:middle;background:#d97706"></span>Retorno de I</td><td>La fase llega a I y vuelve hacia el común de C1.</td></tr>
+                    <tr><td>Caja de registro → C1 (canal)</td><td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:middle;background:#d97706"></span>Común C1 · <span style="display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:middle;background:#7c3aed"></span>Retorno L1 · <span style="display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:middle;background:#7c3aed"></span>Hacia C2</td><td>Recibe el retorno de I; envía la fase a L1 o al común de C2.</td></tr>
+                    <tr><td>Caja de registro → C2 (canal)</td><td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:middle;background:#7c3aed"></span>Común C2 · <span style="display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:middle;background:#7c3aed"></span>Retorno L2 · <span style="display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:middle;background:#7c3aed"></span>Hacia C3</td><td>Envía la fase a L2 o al común de C3.</td></tr>
+                    <tr><td>Caja de registro → C3 (canal)</td><td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:middle;background:#7c3aed"></span>Común C3 · <span style="display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:middle;background:#7c3aed"></span>Retorno L3 · <span style="display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:middle;background:#7c3aed"></span>Retorno L4</td><td>Envía la fase a L3 o a L4.</td></tr>
+                    <tr><td>Caja de registro → L1, L2, L3 y L4 (tubo)</td><td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:middle;background:#7c3aed"></span>Retorno de su lámpara · <span style="display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:middle;background:#0284c7"></span>Neutro</td><td>Alimentan cada lámpara.</td></tr>
+                </tbody>
+            </table>
+            <p style="font-size:0.9em;color:#666">En la caja de registro se unen: retorno de I ↔ común de C1; salida de C1 ↔ común de C2; salida de C2 ↔ común de C3; cada retorno Lx con su lámpara; y el neutro con las cuatro lámparas. <strong>Marca cada conductor</strong> (I, C1, C2, C3, L1…L4): todos los retornos son del mismo color. Si los portalámparas disponen de borne de tierra, se añade el conductor de protección en cada tubo.</p>
+        </div>
+
+        <div class="section">
+            <h3 class="section-header">4. Tabla de funcionamiento: recorrido por la galería</h3>
+            <p>Posición 1 de cada conmutador = salida hacia <strong>su lámpara</strong>; posición 2 = salida hacia el <strong>siguiente</strong> (en C3, hacia L4). Se parte con los tres conmutadores en posición 1.</p>
+            <table>
+                <thead><tr><th>Paso</th><th>Acción del trabajador</th><th>I</th><th>C1</th><th>C2</th><th>C3</th><th>Tramo iluminado</th></tr></thead>
+                <tbody>
+                    <tr><td>0</td><td>Fuera de la galería</td><td>Abierto</td><td>1</td><td>1</td><td>1</td><td>Ninguno</td></tr>
+                    <tr><td>1</td><td><strong>Ida:</strong> entra y acciona I</td><td>Cerrado</td><td>1</td><td>1</td><td>1</td><td>L1</td></tr>
+                    <tr><td>2</td><td>Llega a C1 y lo acciona</td><td>Cerrado</td><td>2</td><td>1</td><td>1</td><td>L2</td></tr>
+                    <tr><td>3</td><td>Llega a C2 y lo acciona</td><td>Cerrado</td><td>2</td><td>2</td><td>1</td><td>L3</td></tr>
+                    <tr><td>4</td><td>Llega a C3 y lo acciona (fondo)</td><td>Cerrado</td><td>2</td><td>2</td><td>2</td><td>L4</td></tr>
+                    <tr><td>5</td><td><strong>Vuelta:</strong> acciona C3</td><td>Cerrado</td><td>2</td><td>2</td><td>1</td><td>L3</td></tr>
+                    <tr><td>6</td><td>Acciona C2</td><td>Cerrado</td><td>2</td><td>1</td><td>1</td><td>L2</td></tr>
+                    <tr><td>7</td><td>Acciona C1</td><td>Cerrado</td><td>1</td><td>1</td><td>1</td><td>L1</td></tr>
+                    <tr><td>8</td><td>Sale y acciona I</td><td>Abierto</td><td>1</td><td>1</td><td>1</td><td>Ninguno</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h3 class="section-header">5. Verificación y medidas eléctricas</h3>
+            <p><strong>Verificación (sin tensión).</strong> Con el polímetro en resistencia entre fase y neutro de la caja de registro:</p>
+            <ul>
+                <li>Con I abierto → circuito abierto (resistencia infinita, «OL»).</li>
+                <li>Con I cerrado → se mide la resistencia de la lámpara seleccionada. Acciona C1, C2 y C3 y comprueba que la medida cambia de abierto a cerrado según la tabla de funcionamiento.</li>
+                <li>En ninguna combinación debe medirse 0 Ω (indicaría un cortocircuito).</li>
+            </ul>
+            <p><strong>Medidas eléctricas (con tensión, autorizadas por el docente).</strong> Registra en la hoja de medidas:</p>
+            <table>
+                <thead><tr><th>Medida</th><th>Cómo se realiza</th><th>Valor esperado</th></tr></thead>
+                <tbody>
+                    <tr><td>Resistencia del circuito</td><td>Sin tensión, entre F y N con cada lámpara seleccionada.</td><td>La de la lámpara en frío (según su potencia).</td></tr>
+                    <tr><td>Tensión</td><td>En paralelo, en bornes de la lámpara encendida.</td><td>≈ 230 V</td></tr>
+                    <tr><td>Intensidad total</td><td>En serie con la fase, o con pinza amperimétrica.</td><td>I = P / U (p. ej., 60 W → ≈ 0,26 A)</td></tr>
+                    <tr><td>Intensidad de cada lámpara</td><td>Seleccionando cada lámpara por turnos.</td><td>Igual a la total, pues solo luce una lámpara.</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h3 class="section-header">6. Secuencia de montaje</h3>
+            <ol>
+                <li><strong>Interpretar:</strong> localiza en el plano la caja de registro, las cuatro lámparas, I, C1, C2 y C3, y sigue en el esquema el recorrido de la fase.</li>
+                <li><strong>Identificar los comunes:</strong> con el polímetro en continuidad y sin tensión, localiza el común de cada conmutador.</li>
+                <li><strong>Canalizar:</strong> fija cajas y portalámparas; coloca los tubos (con curvas en L3 y L4) y la canal protectora hasta los mecanismos, cortando los ángulos a inglete.</li>
+                <li><strong>Montar sin tensión:</strong> fase a I; retorno de I al común de C1; cada conmutador a su lámpara y al común del siguiente; C3 a L3 y L4; neutro a las cuatro lámparas. Marca los conductores y coloca las tapas de la canal.</li>
+                <li><strong>Verificar:</strong> mide la resistencia accionando todos los mecanismos, siempre sin tensión.</li>
+                <li><strong>Probar y medir:</strong> solicita la revisión del docente; después comprueba la tabla de funcionamiento, realiza las medidas de tensión e intensidad y graba el vídeo.</li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h3 class="section-header">7. Lista de comprobación del montaje</h3>
+            <div class="checklist">
+                <label><input type="checkbox"> He interpretado el esquema eléctrico y el de montaje antes de montar.</label>
+                <label><input type="checkbox"> He cortado la canal a inglete en los ángulos y sin rebabas.</label>
+                <label><input type="checkbox"> He colocado los tubos con curvas uniformes y las grapas bien fijadas.</label>
+                <label><input type="checkbox"> He identificado con el polímetro el borne común de C1, C2 y C3.</label>
+                <label><input type="checkbox"> He realizado el montaje con el circuito sin tensión.</label>
+                <label><input type="checkbox"> He conectado la fase a I y la salida de I al común de C1.</label>
+                <label><input type="checkbox"> He conectado cada conmutador a su lámpara y al común del siguiente.</label>
+                <label><input type="checkbox"> He conectado la segunda salida de C3 a L4.</label>
+                <label><input type="checkbox"> He llevado el neutro directamente a las cuatro lámparas.</label>
+                <label><input type="checkbox"> He marcado cada retorno en la caja de registro.</label>
+                <label><input type="checkbox"> He verificado con el polímetro la resistencia accionando I, C1, C2 y C3.</label>
+                <label><input type="checkbox"> He solicitado revisión docente antes de energizar.</label>
+                <label><input type="checkbox"> He comprobado la tabla de funcionamiento y registrado las medidas.</label>
+            </div>
+            <p id="checkcount" style="color:#666;font-size:0.9em">0 de 13 tareas completadas</p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 CFGM Instalaciones Eléctricas y Automáticas · Módulo 0235 Instalaciones eléctricas interiores</p>
+    </footer>
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+<script>
+// Ventana modal para ampliar el plano
+var modal = document.getElementById("myModal");
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){ modal.style.display = "block"; modalImg.src = this.src; captionText.innerHTML = this.alt; }
+document.getElementsByClassName("close")[0].onclick = function(){ modal.style.display = "none"; }
+window.onclick = function(event){ if (event.target == modal) { modal.style.display = "none"; } }
+
+// Lista de comprobación del montaje
+var checks = document.querySelectorAll('.checklist input');
+checks.forEach(function(c){
+  c.addEventListener('change', function(){
+    var n = document.querySelectorAll('.checklist input:checked').length;
+    document.getElementById('checkcount').textContent = n + ' de ' + checks.length + ' tareas completadas';
+  });
+});
+</script>
+    <button type="button" class="btn-imprimir" onclick="window.print()" aria-label="Imprimir esta página">&#128424; Imprimir</button>
+</body>
+</html>

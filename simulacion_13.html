@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 13. Galería ciega. Simulación</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header>
+        <h1>Instalaciones eléctricas interiores</h1>
+        <p>Práctica 13. Galería ciega. Simulación</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Práctica 13 (Galería ciega)</a></li>
+            <li><a href="rubrica_13.html">Rúbrica evaluación</a></li>
+            <li><a href="esquema_13.html">Esquema y montaje</a></li>
+            <li class="active"><a href="simulacion_13.html">Simulación</a></li>
+            <li><a href="presupuesto.html">Presupuesto</a></li>
+            <li><a href="glosario.html">Glosario</a></li>
+            <li><a href="prl.html">Seguridad y PRL</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <h2>13.- Galería ciega: simulación</h2>
+
+        <div class="section">
+            <h3 class="section-header">1. Prueba interactiva del funcionamiento</h3>
+            <p>Recorre la galería: entra cerrando I, avanza accionando C1, C2 y C3 hasta el fondo y vuelve accionándolos en orden inverso hasta salir abriendo I. Solo se ilumina el tramo en el que estás; el recorrido de la fase se resalta en amarillo. No sustituye a la prueba en el taller.</p>
+            <div class="simboard">
+                <svg viewBox="0 0 480 250" role="img" aria-label="Modelo interactivo de conmutadores en cascada">
+                    <text x="12" y="36" fill="#fbbf24" font-size="11" font-weight="bold">F</text>
+                    <path d="M30 40 V190 H60" stroke="#fbbf24" stroke-width="4" fill="none" stroke-linecap="round"/>
+                    <circle cx="60" cy="190" r="4" fill="#fbbf24"/><circle cx="100" cy="190" r="4" fill="#fbbf24"/>
+                    <path id="wI" d="M60 190 L96 172" stroke="#fbbf24" stroke-width="3" fill="none" stroke-linecap="round"/>
+                    <text x="80" y="212" text-anchor="middle" fill="#e2e8f0" font-size="10">I</text>
+                    <path id="sI" d="M100 190 H130" stroke="#c4b5fd" stroke-width="4" fill="none"/>
+                    <circle cx="130" cy="190" r="5" fill="#c4b5fd"/>
+                    <path id="w1" d="M130 190 L166 158" stroke="#c4b5fd" stroke-width="3" fill="none" stroke-linecap="round"/>
+                    <circle cx="170" cy="155" r="4" fill="#c4b5fd"/><circle cx="170" cy="222" r="4" fill="#c4b5fd"/>
+                    <path id="a1" d="M170 155 V90" stroke="#c4b5fd" stroke-width="4" fill="none"/>
+                    <path id="q1" d="M170 222 H210 V190 H220" stroke="#c4b5fd" stroke-width="4" fill="none" stroke-linejoin="round"/>
+                    <text x="140" y="240" text-anchor="middle" fill="#e2e8f0" font-size="10">C1</text>
+                    <circle cx="220" cy="190" r="5" fill="#c4b5fd"/>
+                    <path id="w2" d="M220 190 L256 158" stroke="#c4b5fd" stroke-width="3" fill="none" stroke-linecap="round"/>
+                    <circle cx="260" cy="155" r="4" fill="#c4b5fd"/><circle cx="260" cy="222" r="4" fill="#c4b5fd"/>
+                    <path id="a2" d="M260 155 V90" stroke="#c4b5fd" stroke-width="4" fill="none"/>
+                    <path id="q2" d="M260 222 H300 V190 H310" stroke="#c4b5fd" stroke-width="4" fill="none" stroke-linejoin="round"/>
+                    <text x="230" y="240" text-anchor="middle" fill="#e2e8f0" font-size="10">C2</text>
+                    <circle cx="310" cy="190" r="5" fill="#c4b5fd"/>
+                    <path id="w3" d="M310 190 L346 158" stroke="#c4b5fd" stroke-width="3" fill="none" stroke-linecap="round"/>
+                    <circle cx="350" cy="155" r="4" fill="#c4b5fd"/><circle cx="350" cy="222" r="4" fill="#c4b5fd"/>
+                    <path id="a3" d="M350 155 V90" stroke="#c4b5fd" stroke-width="4" fill="none"/>
+                    <path id="q3" d="M350 222 H440 V90" stroke="#c4b5fd" stroke-width="4" fill="none" stroke-linejoin="round"/>
+                    <text x="320" y="240" text-anchor="middle" fill="#e2e8f0" font-size="10">C3</text>
+                    <circle id="L1" cx="170" cy="72" r="18" fill="#334e68" stroke="#b3c7d5" stroke-width="2"/>
+                    <circle id="L2" cx="260" cy="72" r="18" fill="#334e68" stroke="#b3c7d5" stroke-width="2"/>
+                    <circle id="L3" cx="350" cy="72" r="18" fill="#334e68" stroke="#b3c7d5" stroke-width="2"/>
+                    <circle id="L4" cx="440" cy="72" r="18" fill="#334e68" stroke="#b3c7d5" stroke-width="2"/>
+                    <path d="M157 59 L183 85 M183 59 L157 85 M247 59 L273 85 M273 59 L247 85 M337 59 L363 85 M363 59 L337 85 M427 59 L453 85 M453 59 L427 85" stroke="#8ba4b5" stroke-width="2"/>
+                    <text x="194" y="100" fill="#e2e8f0" font-size="10" font-weight="700">L1</text>
+                    <text x="284" y="100" fill="#e2e8f0" font-size="10" font-weight="700">L2</text>
+                    <text x="374" y="100" fill="#e2e8f0" font-size="10" font-weight="700">L3</text>
+                    <text x="452" y="108" fill="#e2e8f0" font-size="10" font-weight="700">L4</text>
+                    <path d="M170 54 V30 M260 54 V30 M350 54 V30 M440 54 V30 H50 V40" stroke="#7dd3fc" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    <text x="40" y="56" fill="#7dd3fc" font-size="11" font-weight="bold">N</text>
+                </svg>
+                <div id="simstate" style="font-weight:bold;margin:8px"></div>
+                <button id="bI">Cerrar I</button>
+                <button id="b1">Accionar C1</button>
+                <button id="b2">Accionar C2</button>
+                <button id="b3">Accionar C3</button>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3 class="section-header">2. Simulación técnica (opcional)</h3>
+            <ol>
+                <li>Selecciona la fuente de 230 V / 50 Hz, un interruptor, tres conmutadores y cuatro lámparas.</li>
+                <li>Conecta la fase a I y su salida al común de C1.</li>
+                <li>Conecta una salida de cada conmutador a su lámpara y la otra al común del siguiente; las dos salidas de C3 a L3 y L4.</li>
+                <li>Conecta el neutro a las cuatro lámparas y comprueba la tabla de funcionamiento.</li>
+            </ol>
+            <ul class="list-indented">
+                <li><a href="https://www.falstad.com/circuit/" target="_blank" rel="noopener noreferrer">Simulador de circuitos Falstad ↗</a></li>
+                <li>CADe_SIMU (instalado en el aula de informática).</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3 class="section-header">3. Errores frecuentes</h3>
+            <table>
+                <thead><tr><th>Error</th><th>Síntoma</th></tr></thead>
+                <tbody>
+                    <tr><td>El retorno de I o la salida del conmutador anterior conectados a una salida en lugar de al común</td><td>Algunas lámparas no se pueden seleccionar o se encienden dos a la vez.</td></tr>
+                    <tr><td>Retornos de lámparas intercambiados en la caja de registro</td><td>Se enciende una lámpara distinta de la indicada en la tabla.</td></tr>
+                    <tr><td>Neutro llevado a un mecanismo</td><td>Error grave: posible cortocircuito al accionar. Revisar antes de energizar.</td></tr>
+                    <tr><td>Polímetro en función de intensidad conectado en paralelo</td><td>Cortocircuito a través del aparato: se funde su fusible. La intensidad se mide siempre en serie.</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h3 class="section-header">4. Guion recomendado para el vídeo</h3>
+            <ol>
+                <li>Presentación del reto y materiales.</li>
+                <li>Recorrido por la canalización: tubos con curvas y canal protectora.</li>
+                <li>Conductores de cada canalización y uniones en la caja de registro.</li>
+                <li>Verificación con el polímetro accionando todos los mecanismos.</li>
+                <li>Prueba autorizada: recorrido de ida y vuelta por la galería y medidas de tensión e intensidad.</li>
+            </ol>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 CFGM Instalaciones Eléctricas y Automáticas · Módulo 0235 Instalaciones eléctricas interiores</p>
+    </footer>
+<script>
+var iOn = false, p = [1, 1, 1];
+var Y = '#fbbf24', V = '#c4b5fd';
+function draw(){
+  var lit = 0;
+  if (iOn) { lit = p[0] === 1 ? 1 : (p[1] === 1 ? 2 : (p[2] === 1 ? 3 : 4)); }
+  document.getElementById('wI').setAttribute('d', iOn ? 'M60 190 L100 190' : 'M60 190 L96 172');
+  document.getElementById('sI').setAttribute('stroke', iOn ? Y : V);
+  var xs = [130, 220, 310];
+  for (var k = 0; k < 3; k++) {
+    var x = xs[k], alive = iOn && (k === 0 || p.slice(0, k).every(function(v){ return v === 2; }));
+    document.getElementById('w' + (k+1)).setAttribute('d', p[k] === 1 ? 'M'+x+' 190 L'+(x+36)+' 158' : 'M'+x+' 190 L'+(x+36)+' 220');
+    document.getElementById('w' + (k+1)).setAttribute('stroke', alive ? Y : V);
+    document.getElementById('a' + (k+1)).setAttribute('stroke', alive && p[k] === 1 ? Y : V);
+    document.getElementById('q' + (k+1)).setAttribute('stroke', alive && p[k] === 2 ? Y : V);
+  }
+  for (var j = 1; j <= 4; j++) document.getElementById('L' + j).setAttribute('fill', lit === j ? '#fde047' : '#334e68');
+  document.getElementById('simstate').textContent =
+    'I ' + (iOn ? 'CERRADO' : 'ABIERTO') + ' · C1:' + p[0] + ' · C2:' + p[1] + ' · C3:' + p[2] + ' → ' + (lit ? 'LUCE L' + lit : 'TODAS APAGADAS');
+  var bI = document.getElementById('bI'); bI.textContent = iOn ? 'Abrir I' : 'Cerrar I'; bI.classList.toggle('on', iOn);
+}
+document.getElementById('bI').addEventListener('click', function(){ iOn = !iOn; draw(); });
+[1, 2, 3].forEach(function(k){
+  document.getElementById('b' + k).addEventListener('click', function(){ p[k-1] = p[k-1] === 1 ? 2 : 1; draw(); });
+});
+draw();
+</script>
+    <button type="button" class="btn-imprimir" onclick="window.print()" aria-label="Imprimir esta página">&#128424; Imprimir</button>
+</body>
+</html>
