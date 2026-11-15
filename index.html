@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 13. Galería ciega. Descripción</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header>
+        <h1>Instalaciones eléctricas interiores</h1>
+        <p>Práctica 13. Galería ciega. Descripción</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li class="active"><a href="index.html">Práctica 13 (Galería ciega)</a></li>
+            <li><a href="rubrica_13.html">Rúbrica evaluación</a></li>
+            <li><a href="esquema_13.html">Esquema y montaje</a></li>
+            <li><a href="simulacion_13.html">Simulación</a></li>
+            <li><a href="presupuesto.html">Presupuesto</a></li>
+            <li><a href="glosario.html">Glosario</a></li>
+            <li><a href="prl.html">Seguridad y PRL</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <h2>13.- Galería ciega: alumbrado por tramos con conmutadores en cascada</h2>
+
+        <div class="section">
+            <h3 class="section-header">1. Descripción de la práctica</h3>
+            <p>Se desea iluminar una <strong>galería ciega</strong> (un túnel, pasillo de servicio o galería de instalaciones con <strong>una sola entrada</strong>) dividida en cuatro tramos, cada uno con su punto de luz (L1, L2, L3 y L4). El trabajador entra por el único acceso y <strong>va encendiendo los puntos de luz conforme avanza</strong>: en la entrada acciona el interruptor I (se enciende L1) y, al llegar a cada tramo, acciona un conmutador que enciende el tramo siguiente y apaga el anterior. Al terminar, como no hay otra salida, <strong>deshace el camino</strong> accionando de nuevo cada conmutador (se va encendiendo el tramo por el que vuelve) y sale apagando la instalación con el <strong>primer punto de mando, el interruptor I</strong>.
+Como técnico/a en formación, deberás interpretar el plano, ejecutar la canalización (tubo hasta las lámparas y canal protectora hasta los mecanismos), cablear el circuito, verificarlo, realizar las medidas eléctricas y comprobar su funcionamiento recorriendo la galería en los dos sentidos.</p>
+
+            <h3 class="section-header">2. Requisitos funcionales</h3>
+            <p><strong>2.1.- Alimentación:</strong> El circuito se alimenta a 230 V / 50 Hz desde la caja de registro, donde se reparten fase (F), neutro (N) y protección (T) mediante regleta.</p>
+            <p><strong>2.2.- Interruptor general I:</strong> Da o quita la fase a todo el circuito. Con I abierto, las cuatro lámparas están apagadas.</p>
+            <p><strong>2.3.- Conmutadores en cascada:</strong> La salida de I llega al <strong>común de C1</strong>. Cada conmutador tiene una salida hacia <strong>su lámpara</strong> y la otra hacia el <strong>común del siguiente conmutador</strong>: C1 → L1 o C2; C2 → L2 o C3; C3 → L3 o L4.</p>
+            <p><strong>2.4.- Funcionamiento:</strong> Con I cerrado se enciende <strong>una sola lámpara</strong>: la primera de la cadena cuyo conmutador esté en la posición de su lámpara. Si los tres conmutadores dejan pasar la fase al siguiente, se enciende L4 (fondo de la galería).</p>
+            <p><strong>2.5.- Recorrido de ida:</strong> Entrada → I cerrado (luce L1) → C1 (luce L2) → C2 (luce L3) → C3 (luce L4, fondo de la galería).</p>
+            <p><strong>2.6.- Recorrido de vuelta:</strong> C3 (luce L3) → C2 (luce L2) → C1 (luce L1) → I abierto en la salida (todo apagado). Los conmutadores quedan en su posición inicial para la próxima entrada.</p>
+            <p><strong>2.7.- Corte de la fase:</strong> Interruptor y conmutadores actúan siempre sobre la <strong>fase</strong>; el neutro llega directamente a las cuatro lámparas.</p>
+
+            <h3 class="section-header">3. Material suministrado / recursos</h3>
+            <ul>
+                <li>Panel didáctico de montaje.</li>
+                <li>1 caja de registro con regleta (F, N, T).</li>
+                <li>4 cajas de mecanismo: 1 interruptor unipolar (I) y 3 conmutadores (C1, C2 y C3).</li>
+                <li>4 portalámparas (L1, L2, L3 y L4) con lámpara.</li>
+                <li>Canal protectora con accesorios de ángulo y tapas, y tubo de PVC de 16 mm con curvas y grapas.</li>
+                <li>Conductores H07V-K de 1,5 mm² en colores normalizados (marrón/negro/gris fase y retornos; azul neutro; verde-amarillo protección).</li>
+                <li>Herramientas aisladas, pelacables, polímetro (resistencia, tensión e intensidad), pinza amperimétrica si está disponible.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3 class="section-header">4. Justificación</h3>
+            <p>La galería ciega es un caso real de alumbrado por tramos (túneles de servicio, galerías de instalaciones, pasillos largos de un solo acceso): solo se ilumina el tramo en el que está el trabajador, con ahorro de energía. Amplía el encendido alternativo de la práctica 6 encadenando conmutadores y permite comprender:</p>
+            <ul class="list-indented">
+                <li>Cómo se encadenan conmutadores para seleccionar uno entre varios receptores.</li>
+                <li>La identificación del borne común y de las salidas de cada conmutador.</li>
+                <li>La organización de muchos retornos en la caja de registro y su marcado.</li>
+                <li>La verificación del circuito con el polímetro y la medida de resistencia, tensión e intensidad.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3 class="section-header">5. Contexto</h3>
+            <table>
+                <thead><tr><th>Aspecto</th><th>Detalle</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Público Objetivo</strong></td><td>1.º CFGM Instalaciones Eléctricas y Automáticas.</td></tr>
+                    <tr><td><strong>Módulo Profesional</strong></td><td>0235. Instalaciones eléctricas interiores.</td></tr>
+                    <tr><td><strong>Duración Estimada</strong></td><td>8–10 horas (teoría + montaje + verificación y medidas).</td></tr>
+                    <tr><td><strong>Espacio y Recursos</strong></td><td>Aula-taller con paneles de montaje y polímetros.</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h3 class="section-header">6. Resultado de Aprendizaje y Criterios de Evaluación</h3>
+            <p><strong>RA1.</strong> Monta la instalación eléctrica de un local de vivienda, analizando el funcionamiento de sus elementos y aplicando la normativa.</p>
+            <table>
+                <thead><tr><th>Código</th><th>Criterio de Evaluación (CE)</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>CE 1.1</strong></td><td>Realiza las medidas eléctricas del circuito (resistencia, tensión e intensidad).</td></tr>
+                    <tr><td><strong>CE 1.4</strong></td><td>Monta los circuitos y comprueba su correcto funcionamiento.</td></tr>
+                    <tr><td><strong>CE 1.5</strong></td><td>Ejecuta las canalizaciones, cajas de registro y cajas de mecanismos con calidad.</td></tr>
+                    <tr><td><strong>CE 1.9</strong></td><td>Verifica el circuito midiendo la resistencia al accionar los mecanismos (abierto y cerrado).</td></tr>
+                </tbody>
+            </table>
+            <p>Referencia curricular: <a href="https://www.juntadeandalucia.es/boja/2009/164/1" target="_blank" rel="noopener noreferrer">Orden de 7 de julio de 2009 (BOJA) ↗</a>. Adaptar a la programación del departamento y a la normativa vigente.</p>
+        </div>
+
+        <div class="section">
+            <h3 class="section-header">7. Metodología y Métodos de Enseñanza</h3>
+            <p><strong>Metodología:</strong> Activa, práctica y competencial, basada en Aprendizaje Basado en Retos: interpretar, montar, verificar y medir.</p>
+            <ul class="list-indented">
+                <li>Demostración guiada (identificación del común y medidas con el polímetro) + práctica autónoma.</li>
+                <li>Trabajo manipulativo (canal protectora, tubo con curvas, cableado y conexión de los mecanismos).</li>
+                <li>Simulación de la lógica del circuito para predecir qué lámpara se enciende antes de la prueba.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3 class="section-header">8. Actividades de Aprendizaje</h3>
+            <table>
+                <thead><tr><th>Fase</th><th>Actividad</th><th>CE</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Teoría</strong> (60 min)</td><td>Conmutadores en cascada: recorrido de la fase y tabla de funcionamiento. Lectura del esquema eléctrico y del esquema de montaje.</td><td>CE 1.4</td></tr>
+                    <tr><td><strong>Canalización</strong> (150 min)</td><td>Caja de registro, cuatro cajas de mecanismo y cuatro portalámparas; tubos con curvas hasta las lámparas y canal protectora con ángulos hasta los mecanismos.</td><td>CE 1.5</td></tr>
+                    <tr><td><strong>Cableado y conexión</strong> (150 min)</td><td>Identificación de comunes y conexionado completo <strong>sin tensión</strong>, marcando cada retorno.</td><td>CE 1.4</td></tr>
+                    <tr><td><strong>Verificación</strong> (45 min)</td><td>Medida de resistencia accionando I, C1, C2 y C3 (abierto y cerrado) con el circuito desconectado.</td><td>CE 1.9</td></tr>
+                    <tr><td><strong>Prueba y medidas</strong> (60 min)</td><td>Revisión del docente, puesta en tensión autorizada, prueba de la tabla de funcionamiento y medidas de tensión e intensidad.</td><td>CE 1.1, 1.4</td></tr>
+                    <tr><td><strong>Final</strong> (30 min)</td><td>Registro de medidas y grabación del vídeo del montaje.</td><td>CE 1.1, 1.4</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h3 class="section-header">9. Agrupamientos</h3>
+            <ul class="list-indented">
+                <li><strong>Individual:</strong> Tabla de funcionamiento y registro de medidas.</li>
+                <li><strong>Parejas:</strong> Montaje físico (fomenta la cooperación y la revisión mutua).</li>
+                <li><strong>Gran Grupo:</strong> Simulación del recorrido de ida y vuelta por la galería, prediciendo qué tramo se ilumina en cada paso.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3 class="section-header">10. Atención a la Diversidad e Inclusión</h3>
+            <ul class="list-indented">
+                <li>Uso de <strong>material visual ampliado</strong> y esquemas en colores.</li>
+                <li>Uso de la <strong>simulación interactiva</strong> para el alumnado con dificultades motrices.</li>
+                <li><strong>Andamiaje progresivo</strong>:
+                    <ul>
+                        <li>Nivel Básico: Montaje con dos conmutadores (tres lámparas) y ampliación posterior.</li>
+                        <li>Nivel Avanzado: Montaje completo y medida de la intensidad de cada lámpara.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3 class="section-header">11. Evaluación</h3>
+            <h4>Criterios de Evaluación:</h4>
+            <ol>
+                <li>Funcionamiento del circuito (CE 1.4).</li>
+                <li>Calidad de las canalizaciones: tubo y canal protectora (CE 1.5).</li>
+                <li>Verificación del circuito con el polímetro (CE 1.9).</li>
+                <li>Medidas eléctricas: resistencia, tensión e intensidad (CE 1.1).</li>
+            </ol>
+            <h4>Instrumentos / Técnicas:</h4>
+            <ul class="list-indented">
+                <li>Rúbrica de desempeño práctico.</li>
+                <li>Lista de cotejo (checklist) para el montaje.</li>
+                <li>Hoja de registro de medidas.</li>
+                <li>Observación directa del trabajo en el taller.</li>
+                <li>Autoevaluación: ¿cuántos conmutadores harían falta para una galería ciega de seis tramos?</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3 class="section-header">12. Recursos y Materiales</h3>
+            <ul class="list-indented">
+                <li><strong>Hardware:</strong> Panel didáctico, caja de registro con regleta, 4 cajas de mecanismo, interruptor unipolar, 3 conmutadores, 4 portalámparas, 4 lámparas, canal protectora, tubo PVC, conductores H07V-K 1,5 mm², polímetro.</li>
+                <li><strong>Software:</strong> Simulador eléctrico (CADe_SIMU, <a href="https://www.falstad.com/circuit/" target="_blank" rel="noopener noreferrer">Falstad</a> o similar), opcional.</li>
+                <li><strong>Documentación:</strong> Esquema eléctrico y esquema de montaje de la práctica, REBT, ITC-BT-21 e ITC-BT-25.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3 class="section-header">13. Seguridad y Normativa</h3>
+            <ul class="list-indented">
+                <li>Montaje, modificaciones y medidas de resistencia <strong>siempre sin tensión</strong>.</li>
+                <li>Aplicación de las <strong>cinco reglas de oro</strong> antes de cualquier manipulación.</li>
+                <li>Prohibido energizar el panel sin la <strong>revisión del docente</strong>.</li>
+                <li>Las medidas de tensión e intensidad se realizan con autorización y supervisión del docente, con el polímetro en la función y escala correctas (la intensidad, siempre en serie).</li>
+                <li>Normativa eléctrica básica: REBT, ITC-BT-19 (colores), ITC-BT-21 (canales y tubos) e ITC-BT-25 (circuito C1 de alumbrado, 1,5 mm², PIA 10 A).</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3 class="section-header">14. Entregables</h3>
+            <h4>Obligatorio</h4>
+            <ul class="list-indented">
+                <li>Realiza el <strong>vídeo del montaje</strong> en el taller (3–5 min), mostrando el recorrido de ida y vuelta por la galería.</li>
+                <li>Entrega la <strong>hoja de registro de medidas</strong> (verificación y medidas eléctricas).</li>
+            </ul>
+            <h4>Mejora del circuito (trabajo adicional)</h4>
+            <ol>
+                <li>Dibujar el esquema de una galería ciega de <strong>cinco tramos</strong> y completar su tabla de funcionamiento (ida y vuelta).</li>
+            </ol>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 CFGM Instalaciones Eléctricas y Automáticas · Módulo 0235 Instalaciones eléctricas interiores</p>
+    </footer>
+
+    <button type="button" class="btn-imprimir" onclick="window.print()" aria-label="Imprimir esta página">&#128424; Imprimir</button>
+</body>
+</html>
